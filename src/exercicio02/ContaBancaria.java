@@ -3,6 +3,20 @@ package exercicio02;
 public class ContaBancaria {
     private double saldo = 0;
     private String titular;
+
+
+
+public ContaBancaria(String nm){
+    this.titular = nm;
+}
+
+public String getTitular(){
+    return this.titular;
+}
+
+public double getSaldo(){
+    return this.saldo;
+}
     
 public void DepositareSacar(double depositar,double valorSacar){
     if(depositar > 0){
