@@ -19,6 +19,9 @@ public class Carro {
 	public String getMarca() {
 		return this.marca;
 	}
+	public void setMarca(String marca) {
+	    this.marca = marca;
+	}
 	
 	private String modelo;
 	public String getModelo() {
@@ -46,9 +49,14 @@ public class Carro {
 
 	
 	public double abastecer(double combustivel) {
+		if(combustivel > 0) {
 		this.capacidadeTanque += combustivel;
 		return capacidadeTanque;
-		
+		}
+		else {
+			System.out.println("Não é possível abastecer.");
+			return 0.0;
+		}
 	}
 
 	
